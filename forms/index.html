@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <h1 id="top">User Forms</h1>
+    <h1 id="top">Login</h1>
+    <p><a href="#bottom">Bottom of page</a></p>
     <form action="http://www.example.com/subscribe.php" method="get">
         <p>Username:
             <input type="text" name="username" size="15" maxlength="30" />
@@ -16,7 +17,15 @@
             <input type="password" name="password" size="15" maxlength="30" />
         </p>
     </form>
+<hr />
+<form action="http://example.com/login/" method="post">
+    <label> Username:
+        <input type="text" name="username" required="required"/></label><br />
+    <label> Password:
+        <input type="password" name="password" required="required"/></label>
+    <input type="submit" value="Submit" />
 
+</form>
     <form action="http://www.example.com/comments.php">
         <p>What did you think of this gig?</p>
         <textarea name="comments" cols="20" rows="4">Enter your comments..</textarea>
@@ -93,10 +102,51 @@
         <input type="hidden" name="bookmark" value="lyrics" />
     </form>
 
+    <label>Age: <input type="text" name="age" /></label>
+    <br />
+    Gender:
+    <input id="female" type="radio" name="gender" value="f">
+    <label for="female">Female</label>
+    <input id="male" type="radio" name="gender" value="m">
+    <label for="male">Male</label>
 
+    <hr />
 
+    <fieldset>
+        <legend>Contact details</legend>
+        <label> Email:<br />
+            <input type="text" name="email" /></label><br />
+        <label> Mobile:<br />
+            <input type="text" name="email" /></label><br />
+        <label> Telephone:<br />
+            <input type="text" name="email" /></label><br />
+
+    </fieldset>
+    
+    <hr />
+
+    <form action="http://www.example.com/bookings/" method="post">
+        <label for="username">Departure date:</label>
+        <input type="date" name="depart" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <form action="http://www.example.com/subcribe.php">
+        <p>Please enter your email address:</p>
+        <input type="email" name="email" required="required"/>
+        <input type="submit" value="Submit" />
+    </form>
+
+    <form action="http://www.example.org/profile.php">
+        <p>Please enter your website address:</p>
+        <input type="url" name="website" />
+        <input type="submit" value="Submit" />
+        </form>
     <!-- This is Link to go to top of page -->
     <p><a href="#top">Top of page</a></p>
+    <h4 id="bottom">Bottom</h4>
 </body>
 
 </html>
